@@ -5,7 +5,7 @@ set -x
 
 cat > /tmp/config.json << EOF
 
-ui = ${ENABLE_UI}
+ui = ${ENABLE_UI:=false}
 disable_mlock = true
 
 storage "postgresql" {
