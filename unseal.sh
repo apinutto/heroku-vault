@@ -42,7 +42,7 @@ if [[ -z ${VAULT_UNSEAL_KEY+x} ]]; then
   echo "Unseal key is not provided -- vault needs to be manually unsealed"
 else
   echo "Trying to unseal Vault"
-  curl -X PUT -d "$(generate_unseal_request)" http://127.0.0.1:8080/v1/sys/unseal
+  curl -X PUT -d "$(generate_unseal_request)" http://127.0.0.1:$PORT/v1/sys/unseal
   echo "Unseal request done"
 fi
 
