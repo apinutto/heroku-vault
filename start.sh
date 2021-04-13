@@ -4,7 +4,10 @@ set -e
 set -x
 
 cat > /tmp/config.json << EOF
+
+ui = ${ENABLE_UI}
 disable_mlock = true
+
 storage "postgresql" {
   connection_url = "${DATABASE_URL:?}"
 }
