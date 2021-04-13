@@ -3,6 +3,7 @@
   "description": "deploy a dev vault server to heroku",
   "repository": "https://github.com/gpmidi/heroku-vault",
   "keywords": ["vault", "server"],
+  "stack": "container",
   "addons": [
     {
       "plan": "heroku-postgresql",
