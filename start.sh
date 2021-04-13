@@ -3,6 +3,8 @@
 set -e
 set -x
 
+export VAULT_API_ADDR="$HEROKU_DYNO_ID:$PORT"
+
 cat > /tmp/config.json << EOF
 
 ui = ${ENABLE_UI:=false}
@@ -19,6 +21,5 @@ listener "tcp" {
 EOF
 
 nohup /usr/bin/unseal.sh & 
-
 vault server --config=/tmp/config.json
 exit 0
