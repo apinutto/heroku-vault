@@ -20,5 +20,7 @@ EOF
 
 nohup /usr/bin/unseal.sh & 
 
+#export VAULT_API_ADDR=
+
 vault server --config=/tmp/config.json
 exit 0
