@@ -24,7 +24,7 @@
     }
   },
   "scripts": {
-    "postdeploy": "psql ${DATABASE_URL} -q -f vault-kv.sql"
+    "postdeploy": "psql ${DATABASE_URL} -q -f init.sql"
   },
   "formation": {
     "web": {
