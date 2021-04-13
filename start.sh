@@ -3,9 +3,6 @@
 set -e
 set -x
 
-
-
-
 cat > /tmp/config.json << EOF
 
 ui = ${ENABLE_UI:=false}
