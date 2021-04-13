@@ -10,8 +10,8 @@ VAULT_STARTED=0
 
 for i in {1..10}
 do
-  echo "Requesting http://127.0.0.1:8080/v1/sys/health"
-  RESPONSE=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/v1/sys/health)
+  echo "Requesting http://127.0.0.1:$PORT/v1/sys/health"
+  RESPONSE=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:$PORT/v1/sys/health)
   echo "Response is ${RESPONSE}"
 
   if [ ${RESPONSE} -eq 200 ]; then
