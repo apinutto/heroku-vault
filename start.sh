@@ -10,6 +10,7 @@ disable_mlock = true
 
 storage "postgresql" {
   connection_url = "${DATABASE_URL:?}"
+  ha_enabled = true
 }
 listener "tcp" {
  address = "0.0.0.0:$PORT"
