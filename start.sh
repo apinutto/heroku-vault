@@ -17,5 +17,7 @@ listener "tcp" {
 }
 EOF
 
+nohup /usr/bin/unseal.sh & 
+
 vault server --config=/tmp/config.json
 exit 0
