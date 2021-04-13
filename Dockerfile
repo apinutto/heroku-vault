@@ -1,6 +1,6 @@
 FROM vault:latest
 
-RUN apk --update add redis postgresql-client
+RUN apk --update add redis postgresql-client curl
 ADD init.sql /init.sql
 ADD start.sh /usr/bin/start.sh
 ADD unseal.sh /usr/bin/unseal.sh
