@@ -1,0 +1,23 @@
+{
+  "name": "vault server",
+  "description": "deploy a dev vault server to heroku",
+  "repository": "https://github.com/gpmidi/heroku-vault",
+  "keywords": ["vault", "server"],
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "13"
+      }
+    }
+  ],
+  "scripts": {
+    "postdeploy": "psql ${DATABASE_URL} -q -f vault-kv.sql"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  }
+}
