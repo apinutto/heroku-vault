@@ -9,7 +9,7 @@ ui = ${ENABLE_UI:=false}
 disable_mlock = true
 
 #api_addr = "http://$HEROKU_DYNO_ID:$PORT"
-cluster_addr = "http://$HEROKU_DYNO_ID:8080"
+#cluster_addr = "http://$HEROKU_DYNO_ID:8080"
 
 storage "postgresql" {
   connection_url = "${DATABASE_URL:?}"
