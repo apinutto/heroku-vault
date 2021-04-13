@@ -24,9 +24,6 @@
       "value": "false"
     }
   },
-  "scripts": {
-    "postdeploy": "psql ${DATABASE_URL} -q -f init.sql"
-  },
   "formation": {
     "web": {
       "quantity": 1,
