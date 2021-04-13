@@ -3,7 +3,7 @@
 set -e
 set -x
 
-export VAULT_API_ADDR="$HEROKU_DYNO_ID:$PORT"
+export VAULT_API_ADDR="http://$HEROKU_DYNO_ID:$PORT"
 
 cat > /tmp/config.json << EOF
 
