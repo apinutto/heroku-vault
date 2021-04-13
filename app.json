@@ -23,10 +23,11 @@
       "required": true,
       "value": "false"
     },
-    "VAULT_API_ADDR": {
+    "VAULT_CLUSTER_ADDR": {
       "description": "External URL",
       "required": true,
-      "value": "https://NAME.herokuapp.com"
+      "value": "https://NAME.herokuapp.com:443"
+    }
   },
   "formation": {
     "web": {
