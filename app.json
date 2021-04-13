@@ -11,6 +11,18 @@
       }
     }
   ],
+  "env": {
+    "VAULT_UNSEAL_KEY": {
+      "description": "Vault unseal key",
+      "required": false,
+      "value": "to-be-overriden"
+    },
+    "ENABLE_UI": {
+      "description": "Should Vault UI be enabled",
+      "required": true,
+      "value": "false"
+    }
+  },
   "scripts": {
     "postdeploy": "psql ${DATABASE_URL} -q -f vault-kv.sql"
   },
