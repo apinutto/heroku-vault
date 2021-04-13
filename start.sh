@@ -3,13 +3,15 @@
 set -e
 set -x
 
+#api_addr = "http://$HEROKU_DYNO_ID:$PORT"
+#cluster_addr = "http://$HEROKU_DYNO_ID:8080"
+
+
 cat > /tmp/config.json << EOF
 
 ui = ${ENABLE_UI:=false}
 disable_mlock = true
 
-#api_addr = "http://$HEROKU_DYNO_ID:$PORT"
-#cluster_addr = "http://$HEROKU_DYNO_ID:8080"
 
 storage "postgresql" {
   connection_url = "${DATABASE_URL:?}"
