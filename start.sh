@@ -3,12 +3,13 @@
 set -e
 set -x
 
-export VAULT_API_ADDR="http://$HEROKU_DYNO_ID:$PORT"
-
 cat > /tmp/config.json << EOF
 
 ui = ${ENABLE_UI:=false}
 disable_mlock = true
+
+api_addr = "http://$HEROKU_DYNO_ID:$PORT"
+cluster_addr = "http://$HEROKU_DYNO_ID:8080"
 
 storage "postgresql" {
   connection_url = "${DATABASE_URL:?}"
@@ -16,6 +17,7 @@ storage "postgresql" {
 }
 listener "tcp" {
  address = "0.0.0.0:$PORT"
+ cluster_address = "0.0.0.0:8080"
  tls_disable = 1
 }
 EOF
