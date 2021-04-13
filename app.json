@@ -22,7 +22,11 @@
       "description": "Should Vault UI be enabled",
       "required": true,
       "value": "false"
-    }
+    },
+    "VAULT_API_ADDR": {
+      "description": "External URL",
+      "required": true,
+      "value": "https://NAME.herokuapp.com"
   },
   "formation": {
     "web": {
