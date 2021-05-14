@@ -21,7 +21,7 @@
     "ENABLE_UI": {
       "description": "Should Vault UI be enabled",
       "required": true,
-      "value": "false"
+      "value": "true"
     },
     "VAULT_CLUSTER_ADDR": {
       "description": "External URL",
@@ -32,7 +32,7 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "hobby"
+      "size": "free"
     }
   }
 }
